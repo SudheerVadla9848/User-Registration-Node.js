@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <form id="registrationForm">
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+    <button type="submit">Register</button>
+  </form>
+
+  <table id="usersTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
