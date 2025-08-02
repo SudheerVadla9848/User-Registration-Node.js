@@ -4,8 +4,7 @@
 "description": "User registration API with MongoDB, deployed on Vercel",
 "main": "api/register.js",
 "scripts": {
-"dev": "vercel dev",
-"build": "echo 'No build needed'"
+"dev": "vercel dev"
 },
 "keywords": [],
 "license": "ISC",
