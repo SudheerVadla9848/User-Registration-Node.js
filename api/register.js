@@ -1,8 +1,16 @@
-export default async function handler(req, res) {
+// api/register.js
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+
+mongoose.connect(process.env.MONGODB_URI);
+
+module.exports = async (req, res) => {
   if (req.method === 'POST') {
-    const { username, email, password } = req.body;
-    // Perform validation, hashing, saving, etc.
-    return res.status(200).json({ message: 'User registered!' });
+    const { username, password } = req.body;
+    const hash = await bcrypt.hash(password, 10);
+    // Save to DB logic
+    res.status(200).json({ success: true });
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
   }
-  res.status(405).json({ error: 'Method not allowed' });
-}
+};
